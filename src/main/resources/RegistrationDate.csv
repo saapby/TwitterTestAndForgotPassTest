@@ -1,0 +1,7 @@
+user;valzxcidsdsqd@email.com;pass;;;Ваш пароль должен состоять как минимум из 6 символов.
+saap;invalid;password123EHD54d;;Введите действительный адрес электронной почты; ;
+Twitter;valzxcidsdsqd@email.com;password123EHD54d;Ваше имя не может содержать слово «Twitter».;; ;
+ ;valzxcidsdsqd@email.com;password123EHD54d;Как вас зовут?;; ;
+ ;+3333152;password123EHD54d;Как вас зовут?;Пожалуйста, введите действительный номер телефона.; ;
+user;valid@gmail.com;password123EHD54d;;Данный адрес электронной почты уже зарегистрирован. Хотите войти или восстановить пароль?; ;
+user;valzxcidsdsqd@email.com;qwerty;;;Придумайте более сложный пароль пароль.;
