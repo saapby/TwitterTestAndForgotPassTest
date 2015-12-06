@@ -2,6 +2,7 @@ package helpers;
 
 import org.apache.commons.io.FileUtils;
 import org.openqa.selenium.By;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
@@ -40,6 +41,15 @@ public class Helper {
             FileUtils.copyFile(screen, new File(path));
         } catch (IOException ex) {
             System.out.println(ex.getMessage());
+        }
+    }
+
+    public static boolean isElementPresent(By locator) {
+        try {
+            getDriver().findElement(locator);
+            return true;
+        } catch (NoSuchElementException e) {
+            return false;
         }
     }
 }

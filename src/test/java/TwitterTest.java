@@ -45,6 +45,8 @@ public class TwitterTest {
 
     @Test
     public void signupTwitterTest() throws IOException {
+        getDriver().findElement(By.className("caret")).click();
+        getDriver().findElement(By.cssSelector("a[href='?lang=en']")).click();
         String name = "";
         String email = "invalidemail";
         String pass = "PassWord525dSDwdq";
@@ -101,8 +103,8 @@ public class TwitterTest {
         Assert.assertEquals(validation.size(), 1);
         Assert.assertTrue(getDriver().findElement(signupPage.active_email_valid_mess).isDisplayed());
         WebElement valid =getDriver().findElement(signupPage.active_email_valid_mess);
-        Helper.saveScreenshot("F:\\it-academy-selenium\\lesson2015.11.13\\screen.png");
-        Helper.saveScreenshot(signupPage.active_email_valid_mess, "F:\\it-academy-selenium\\lesson2015.11.13\\element.png");
+        Helper.saveScreenshot("H:\\it-academy-selenium\\lesson2015.11.13\\screen.png");
+        Helper.saveScreenshot(signupPage.active_email_valid_mess, "H:\\it-academy-selenium\\lesson2015.11.13\\element.png");
         Assert.assertTrue(valid.isDisplayed());
         Assert.assertEquals(valid.getText(), "Введите действительный адрес электронной почты");
 
