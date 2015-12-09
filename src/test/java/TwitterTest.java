@@ -111,12 +111,12 @@ public class TwitterTest {
 //        Assert.assertTrue(validation.get(0).findElement(By.xpath(".//parent::div[@data-fieldname='email']")).isDisplayed());
     }
 
-    @Test
-    public void loginTest() {
-        getDriver().findElement(By.id("username")).sendKeys("tomsmith");
-        getDriver().findElement(By.id("password")).sendKeys("SuperSecretPassword!");
-        getDriver().findElement(By.cssSelector("button[type='submit']")).click();
-        Assert.assertTrue(getDriver().findElement(By.cssSelector("#flash.success")).isDisplayed());
-        Assert.assertTrue(getDriver().findElement(By.cssSelector("a[href='/logout']")).isDisplayed());
-    }
+//    @Test
+//    public void loginTest() {
+//        getDriver().findElement(By.id("username")).sendKeys("tomsmith");
+//        getDriver().findElement(By.id("password")).sendKeys("SuperSecretPassword!");
+//        getDriver().findElement(By.cssSelector("button[type='submit']")).click();
+//        Assert.assertTrue(getDriver().findElement(By.cssSelector("#flash.success")).isDisplayed());
+//        Assert.assertTrue(getDriver().findElement(By.cssSelector("a[href='/logout']")).isDisplayed());
+//    }
 }

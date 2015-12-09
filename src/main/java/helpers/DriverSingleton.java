@@ -23,7 +23,7 @@ public class DriverSingleton {
 
     public static WebDriver getDriver() {
         if (driver == null) {
-            initDriver("firefox");
+            initDriver("default");
         }
         return driver;
     }

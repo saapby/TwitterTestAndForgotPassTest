@@ -5,6 +5,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.support.ui.Select;
 
 import java.io.File;
 import java.io.IOException;
@@ -51,5 +52,21 @@ public class Helper {
         } catch (NoSuchElementException e) {
             return false;
         }
+    }
+
+    public static void enterEmail(String emailName, By forgetButton, By input, String emailAfterDog, By selectCombobox, By setButton) {
+        getDriver().findElement(forgetButton).click();
+        if (isElementPresent(input)) {
+            getDriver().findElement(input).sendKeys(emailName);
+//            System.out.println("test pustoe pole vvoda, i v nego vveli znachenie");
+        } else {
+            getDriver().findElement(forgetButton).click();
+            getDriver().findElement(input).sendKeys(emailName);
+//            System.out.println("test ni to ni drugoe, i v nego vveli znachenie");
+        }
+
+        Select selectBox = new Select(getDriver().findElement(selectCombobox));
+        selectBox.selectByValue(emailAfterDog);
+        getDriver().findElement(setButton).click();
     }
 }
